@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://bh2xx8glsnt4r"]
+
+[ext_resource type="Script" path="res://scripts/match/match_scene.gd" id="1_12jdx"]
+[ext_resource type="PackedScene" path="res://scenes/stadium/pitch.tscn" id="2_3m06r"]
+[ext_resource type="PackedScene" path="res://scenes/ball/ball.tscn" id="3_djda6"]
+[ext_resource type="PackedScene" path="res://scenes/players/batter.tscn" id="4_4jtbo"]
+[ext_resource type="PackedScene" path="res://scenes/players/bowler.tscn" id="5_e3ejf"]
+
+[node name="Match" type="Node3D"]
+script = ExtResource("1_12jdx")
+
+[node name="Pitch" parent="." instance=ExtResource("2_3m06r")]
+
+[node name="Ball" parent="." instance=ExtResource("3_djda6")]
+position = Vector3(0, 1, -5)
+
+[node name="Batter" parent="." instance=ExtResource("4_4jtbo")]
+position = Vector3(0, 0.95, 3)
+
+[node name="Bowler" parent="." instance=ExtResource("5_e3ejf")]
+position = Vector3(0, 0.95, -6)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+position = Vector3(0, 5.5, 11)
+rotation = Vector3(-0.35, 0, 0)
+current = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Instructions" type="Label" parent="CanvasLayer"]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 860.0
+offset_bottom = 120.0
+text = "SPACE: Bowl | ENTER: Shot | R: Return to Menu"

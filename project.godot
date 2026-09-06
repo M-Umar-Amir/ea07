@@ -1,0 +1,22 @@
+; Engine configuration file.
+; It's best edited using the editor and not directly.
+;
+; Format:
+;   [section]
+;   param=value
+
+config_version=5
+
+[application]
+config/name="Open Cricket Remaster"
+run/main_scene="res://scenes/main/main.tscn"
+config/features=PackedStringArray("4.2")
+
+[autoload]
+GameStateManager="*res://scripts/core/game_state_manager.gd"
+
+[display]
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
