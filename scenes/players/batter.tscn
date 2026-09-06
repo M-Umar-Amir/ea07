@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d52v7iph5wb4h"]
+
+[ext_resource type="Script" path="res://scripts/players/batter.gd" id="1_0f5eh"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_4mqai"]
+radius = 0.35
+mid_height = 1.2
+
+[node name="Batter" type="Node3D"]
+script = ExtResource("1_0f5eh")
+
+[node name="Body" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_4mqai")
+
+[node name="BatGuide" type="Marker3D" parent="."]
+position = Vector3(0.5, 1.1, 0.2)
